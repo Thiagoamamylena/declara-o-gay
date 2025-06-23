@@ -1,180 +1,133 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Coisa mais fofa do mundão 💖</title>
+  <title>Para a minha bebezinha 💖💖</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       height: 100vh;
-      background: #ffe6f0;
-      font-family: 'Baloo 2', cursive, Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      background: radial-gradient(circle, #ff9a9e, #fad0c4);
       overflow: hidden;
-      color: #ff2d55;
-      user-select: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
     }
 
     h1 {
-      font-size: 3.5rem;
-      margin-bottom: 0.3rem;
-      text-shadow: 2px 2px 5px #ffa3c1;
-      letter-spacing: 0.15em;
+      color: white;
+      font-size: 3em;
+      text-shadow: 2px 2px 4px #00000050;
+      margin: 20px;
     }
 
     p {
-      font-size: 1.3rem;
-      margin: 0 20px 30px;
-      text-align: center;
-      max-width: 400px;
-      line-height: 1.4;
-      color: #d93b6f;
-      font-weight: 600;
+      color: white;
+      font-size: 1.5em;
+      max-width: 600px;
+      margin: 20px;
     }
 
-    .photo-container {
-      width: 220px;
-      height: 220px;
+    img {
+      width: 250px;
+      height: 250px;
       border-radius: 50%;
-      overflow: hidden;
-      border: 6px solid #ff81ac;
-      box-shadow: 0 0 15px #ff81acaa;
-      margin-bottom: 30px;
-      background: #ffe6f0 url('https://cdn-icons-png.flaticon.com/512/1077/1077012.png') no-repeat center;
-      background-size: 70%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 0 20px #ffffff70;
+      margin: 20px;
     }
 
-    .photo-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 6s infinite ease-in;
+    }
+
+    .heart:before,
+    .heart:after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart:before { top: -10px; left: 0; }
+    .heart:after { left: -10px; top: 0; }
+
+    @keyframes float {
+      0%   { transform: translateY(0) rotate(45deg); opacity: 1; }
+      100% { transform: translateY(-100vh) rotate(45deg); opacity: 0; }
+    }
+
+    iframe {
+      margin: 20px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00000040;
     }
 
     button {
-      background: linear-gradient(135deg, #ff5c8d, #ff91b8);
+      background: #ff5e78;
       border: none;
-      padding: 18px 45px;
-      font-size: 1.5rem;
-      font-weight: 900;
+      padding: 15px 30px;
       color: white;
-      border-radius: 40px;
+      font-size: 1.2em;
+      border-radius: 30px;
       cursor: pointer;
-      box-shadow: 0 6px 15px #ff5c8d99;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      user-select: none;
-    }
-
-    button::before {
-      content: '💕';
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%) scale(1);
-      font-size: 1.6rem;
-      animation: heart-beat 1.5s infinite;
+      box-shadow: 0 5px 15px #00000030;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 10px 25px #ff5c8dcc;
-    }
-
-    @keyframes heart-beat {
-      0%, 100% {
-        transform: translateY(-50%) scale(1);
-        opacity: 1;
-      }
-      50% {
-        transform: translateY(-50%) scale(1.4);
-        opacity: 0.8;
-      }
-    }
-
-    /* corações fofos caindo */
-    .heart {
-      position: fixed;
-      width: 20px;
-      height: 20px;
-      background: #ff5c8d;
-      transform: rotate(45deg);
-      border-radius: 3px;
-      animation: floatUp 5s linear forwards;
-      pointer-events: none;
-      z-index: 9999;
-    }
-    .heart::before,
-    .heart::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: #ff5c8d;
-      border-radius: 50%;
-    }
-    .heart::before {
-      top: -10px;
-      left: 0;
-    }
-    .heart::after {
-      left: 10px;
-      top: 0;
-    }
-    @keyframes floatUp {
-      0% {
-        opacity: 1;
-        transform: translateY(0) rotate(45deg);
-      }
-      100% {
-        opacity: 0;
-        transform: translateY(-150vh) rotate(45deg);
-      }
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px #00000040;
     }
   </style>
 </head>
 <body>
-  <h1>Ô meu amorzinho 💕</h1>
-  <p>Tu é tipo um sol que ilumina até meus dias mais nubladim. Sério, fica aqui comigo, vai? 💖</p>
+  <h1>Minha bebezinha iti malia ❤️</h1>
 
-  <div class="photo-container" title="Coloca sua foto aqui!">
-    <!-- Se quiser, substitui o conteúdo abaixo por uma <img src="WhatsApp Image 2025-06-23 at 18.19.09" alt="Sua foto"> -->
-  </div>
+  <!-- SUA FOTO AQUI -->
+  <img src="WhatsApp Image 2025-06-23 at 18.19.09" alt="Foto do casal">
 
-  <button onclick="explodeHearts()">Clica aqui que é só amor! 💝</button>
+  <p id="mainMessage">De qualquer jeito, seu sorriso vai ser meu raio de Sol 💖💖💖💖💖💖💖.</p>
+
+  <!-- PLAYER DE MÚSICA DO YOUTUBE -->
+  <iframe width="300" height="169"
+    src="https://youtu.be/AwAMEZsQBGI?si=TLEznEMSf5kJuECv"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+
+  <!-- BOTÃO SURPRESA -->
+  <button onclick="showSurprise()">Clique para mais amor 💖</button>
 
   <script>
     function createHeart() {
       const heart = document.createElement('div');
       heart.classList.add('heart');
-      heart.style.left = Math.random() * window.innerWidth + 'px';
-      heart.style.top = window.innerHeight + 20 + 'px';
-      heart.style.animationDuration = 4 + Math.random() * 3 + 's';
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (2 + Math.random() * 3) + "s";
       document.body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 7000);
+      setTimeout(() => heart.remove(), 6000);
     }
+    setInterval(createHeart, 300);
 
-    // Cria corações caindo o tempo todo
-    setInterval(createHeart, 350);
-
-    // Explode muitos corações quando clicar no botão
-    function explodeHearts() {
-      for (let i = 0; i < 50; i++) {
-        setTimeout(createHeart, i * 60);
+    function showSurprise() {
+      const message = document.getElementById('mainMessage');
+      message.textContent = "Você é o meu paraíso na Terra. Te amo hoje, amanhã e para sempre tipo bastantao! 💕";
+      for (let i = 0; i < 30; i++) {
+        setTimeout(createHeart, i * 100);
       }
-      alert('Tu é muito fofinho(a)! 🥰');
     }
   </script>
 </body>
